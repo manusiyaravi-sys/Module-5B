@@ -17,8 +17,33 @@ To create and display a **DataFrame** using the **Pandas** library in Python fro
 ---
 
 ## 💻 Program
-Add code here
+```
+import pandas as pd
+
+
+data = {
+    'name': ['Aman', 'Kamal', 'Amjad', 'Rohan', 'Amit', 'Sumit', 'Matthew', 'Kartik', 'Kavita', 'Pooja'],
+    'perc': [79.5, 29.0, 90.5, None, 32.0, 65.0, 56.0, None, 29.0, 89.0],
+    'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']
+}
+df = pd.DataFrame(data, index=list('ABCDEFGHIJ'))
+
+print("Original data frame:")
+print(df)
+
+row = input().strip()
+new_perc = float(input())
+
+
+df.loc[row, 'perc'] = new_perc
+
+print(f"Change the percentage in row {row} to {new_perc}")
+print(df)
+```
 
 ## Output
 
+<img width="1121" height="870" alt="m5-3" src="https://github.com/user-attachments/assets/c13010e1-e20d-4b18-8f26-b069458b1d3b" />
+
 ## Result
+successfuly created
